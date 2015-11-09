@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.textalign {
+    text-align:left;
+    border-style: dotted;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+div.radiogroup{
+  position:absolute;
+  top:75px;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.textalign').css('text-align','left');
+            break;
+        case 'value_2':
+            $('.textalign').css('text-align','right');
+            break;
+        case 'value_3':
+            $('.textalign').css('text-align','center');
+            break;
+        case 'value_4':
+            $('.textalign').css('text-align','justify');
+            break;
+        case 'value_5':
+            $('.textalign').css('text-align','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+
+<!-- <p>An <img src="cake.jpg" alt="textalign" width="270" height="80" /> image with a default alignment.</p>
+
+<p>An <img class="top" src="cake.jpg" alt="textalign" width="270" height="80" /> image with a text-top alignment.</p>
+
+<p>An <img class="bottom" src="cake.jpg" alt="textalign" width="270" height="80" /> image with a text-bottom alignment.</p> -->
+<nav>
+  << <a href="playground.html">goback</a>
+</nav>
+<div class="textalign col-md-6">
+  <p>This example demonstrates different text aligns.
+  Everywhere you look you find games, games and more games. They are on your
+  cell phone, connected to your TV via a gaming console and everywhere you
+  look on the web. People love their games, even the corny ones.
+  </p>
+</div>
+
+<div class="radiogroup">
+  <h2>Let's play with text align!</h2>
+  <table class="table">
+    <tr>
+      <td><input type="radio" name="name" value="left" class="type" id="value_1"></td>
+      <td>left</td>
+      <td>Aligns the text to the left.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="right" class="type" id="value_2"></td>
+      <td>right</td>
+      <td>Aligns the text to the right.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="center" class="type" id="value_3"></td>
+      <td>center</td>
+      <td>Centers the text.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="justify" class="type" id="value_4" ></td>
+      <td>justify</td>
+      <td>Stretches the lines so that each line has equal width (like in newspapers and magazines.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="initial" class="type" id="value_5"></td>
+      <td>initial</td>
+      <td>Sets this property to its default value.</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

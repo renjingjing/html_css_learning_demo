@@ -1,0 +1,25 @@
+body {
+    background-image: url("melaleucacake.jpg");
+    /*background-repeat: no-repeat;*/
+    /*background-repeat: repeat;*/
+    background-repeat: repeat-y;
+    background-position: right top;
+    /*background-attachment: fixed;*/
+    margin-right: 600px;
+    /*margin-right: 200px;*/
+}
+
+h1,h2,h3,h4{
+	text-align: center;
+	font-family: bold;
+}
+
+/*p.question{
+  color:red;
+  font-size: 20px;
+  font-family: bold;
+}*/
+
+/*p#explain{
+  background-color:lightyellow;
+}*/

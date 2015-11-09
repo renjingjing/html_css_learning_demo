@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<style>
+span#mySpan {
+  background-color:yellow;
+  vertical-align:initial;
+}
+p{
+  font-size: 20px;
+}
+div.textbox {
+    border-style: dotted;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+div.radiogroup{
+  position:absolute;
+  top:90px;
+}
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('#mySpan').css('vertical-align','baseline');
+            break;
+        case 'value_2':
+            $('#mySpan').css('vertical-align','sub');
+            break;
+        case 'value_3':
+            $('#mySpan').css('vertical-align','super');
+            break;
+        case 'value_4':
+            $('#mySpan').css('vertical-align','top');
+            break;
+        case 'value_5':
+            $('#mySpan').css('vertical-align','text-top');
+            break;
+        case 'value_6':
+            $('#mySpan').css('vertical-align','middle');
+            break;
+        case 'value_7':
+            $('#mySpan').css('vertical-align','bottom');
+            break;
+        case 'value_8':
+            $('#mySpan').css('vertical-align','text-bottom');
+            break;
+        case 'value_9':
+            $('#mySpan').css('vertical-align','0px');
+            break;
+        case 'value_10':
+            $('#mySpan').css('vertical-align','10px');
+            break;
+        case 'value_11':
+            $('#mySpan').css('vertical-align','25px');
+            break;
+        case 'value_12':
+            $('#mySpan').css('vertical-align','-25px');
+            break;
+        case 'value_13':
+            $('#mySpan').css('vertical-align','-50px');
+            break;
+        case 'value_14':
+            $('#mySpan').css('vertical-align','1cm');
+            break;
+        case 'value_15':
+            $('#mySpan').css('vertical-align','10%');
+            break;
+        case 'value_16':
+            $('#mySpan').css('vertical-align','50%');
+            break;
+        case 'value_17':
+            $('#mySpan').css('vertical-align','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <div class="textbox col-md-9">
+	   <p>This example demonstrates different <span id="mySpan" style="vertical-align: initial;">vertical-aligns</span>.</p>
+ </div>
+  <div class="textbox col-md-3">
+    <p>the dode:
+      <br>
+      span{
+        <br>
+        vertical-align:initial;
+        <br>
+      }
+    </p>
+  </div>
+<div class="radiogroup">
+  <h2>Let's play with vertical align!</h2>
+  <table class="table">
+    <tr>
+      <td><input type="radio" name="name" value="baseline" class="type" id="value_1"></td>
+      <td>baseline</td>
+      <td>Align the baseline of the element with the baseline of the parent element. This is default.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="sub" class="type" id="value_2"></td>
+      <td>sub</td>
+      <td>Aligns the element as if it was subscript.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="super" class="type" id="value_3"></td>
+      <td>super</td>
+      <td>Aligns the element as if it was superscript.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="top" class="type" id="value_4" ></td>
+      <td>top</td>
+      <td>The top of the element is aligned with the top of the tallest element on the line.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="text-top" class="type" id="value_5"></td>
+      <td>text-top</td>
+      <td>The top of the element is aligned with the top of the parent element's font.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="middle" class="type" id="value_6"></td>
+      <td>middle</td>
+      <td>The element is placed in the middle of the parent element.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="bottom" class="type" id="value_7"></td>
+      <td>bottom</td>
+      <td>The bottom of the element is aligned with the lowest element on the line</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="text-bottom" class="type" id="value_8" ></td>
+      <td>text-bottom</td>
+      <td>The bottom of the element is aligned with the bottom of the parent element's font.</td>
+    </tr>
+    <tr >
+      <td>
+        <input type="radio" name="name" value="0px" class="type" id="value_9">0px
+        <input type="radio" name="name" value="10px" class="type" id="value_10">10px
+        <input type="radio" name="name" value="25px" class="type" id="value_11">25px
+        <input type="radio" name="name" value="-25px" class="type" id="value_12">-25px
+        <input type="radio" name="name" value="-50px" class="type" id="value_13">-50px
+      </td>
+      <td>Length</td>
+      <td>Raises or lower an element by the specified length.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="1cm" class="type" id="value_14"></td>
+      <td>1cm</td>
+      <td>Length</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="10%" class="type" id="value_15"></td>
+      <td>10%</td>
+      <td>Raises or lower an element in a percent of the "line-height" property.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="50%" class="type" id="value_16"></td>
+      <td>50%</td>
+      <td>Raises or lower an element in a percent of the "line-height" property.</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="name" value="top" class="type" id="value_17" ></td>
+      <td>initial</td>
+      <td>Sets this property to its default value.</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

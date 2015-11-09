@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.textdecoration {
+    border-style: dotted;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    text-decoration:none;
+    text-shadow:normal;
+}
+div.textsyntax {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+div.radiogroup{
+  position:absolute;
+  top:150px;
+}
+td.title{
+  font-weight: bold;
+  font-size: 18px;
+  color:darkblue;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.textdecoration').css('text-decoration','none');
+            break;
+        case 'value_2':
+            $('.textdecoration').css('text-decoration','underline');
+            break;
+        case 'value_3':
+            $('.textdecoration').css('text-decoration','overline');
+            break;
+            line-through
+        case 'value_4':
+            $('.textdecoration').css('text-decoration','line-through');
+            break;
+        case 'value_5':
+            $('.textdecoration').css('text-decoration','initial');
+            break;
+        case 'value_11':
+            $('.textdecoration').css('text-shadow','2px 2px red');
+            break;
+        case 'value_12':
+            $('.textdecoration').css('text-shadow','15px 15px red');
+            break;
+        case 'value_13':
+            $('.textdecoration').css('text-shadow','-10px 10px red');
+            break;
+        case 'value_14':
+            $('.textdecoration').css('text-shadow','-10px -10px red');
+            break;
+        case 'value_15':
+            $('.textdecoration').css('text-shadow','5px 5px 1px red');
+            break;
+        case 'value_16':
+            $('.textdecoration').css('text-shadow','5px 5px 5px red');
+            break;
+        case 'value_17':
+            $('.textdecoration').css('text-shadow','5px 5px 10px blue');
+            break;
+        case 'value_18':
+            $('.textdecoration').css('text-shadow','5px 5px 10px black');
+            break;
+        case 'value_19':
+            $('.textdecoration').css('text-shadow','5px 5px 10px #00FF00');
+            break;
+        case 'value_20':
+            $('.textdecoration').css('text-shadow','none');
+            break;
+        case 'value_21':
+            $('.textdecoration').css('text-shadow','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <br>
+  <div class="textdecoration col-md-6">
+    <p>This example demonstrates different decorations and text-shadow.Change the decoration or text-shadow of
+      text by clicking on the different decoration or text-shadow of text to see what happend!
+    </p>
+  </div>
+  <div class="textsyntax col-md-6">
+
+    <div class="col-md-3">
+      the code:
+    </div>
+    <div class="col-md-9">
+      div {
+        <br>
+        text-decoration:none;
+        <br>
+        text-shadow:1px 1px 1px grey;
+        <br>
+      }
+    </div>
+  </div>
+  <div class="radiogroup">
+    <h2>Let's play with text decoration and text-shadow!</h2>
+      <table class="table">
+        <tr>
+          <td class="title">text-decoration</td>
+            <tr>
+          <td>
+            <input type="radio" name="name" value="none" class="type" id="value_1"> none
+          </td>
+          <td>none</td>
+          <td>Defines a normal text. This is default.</td>
+          <td>
+            <input type="radio" name="name" value="underline" class="type" id="value_2"> underline
+          </td>
+          <td>underline</td>
+          <td>Defines a line below the text.</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="overline" class="type" id="value_3"> overline
+          </td>
+          <td>overline</td>
+          <td>Defines a line above the text.</td>
+          <td>
+            <input type="radio" name="name" value="line-through" class="type" id="value_4"> line-through
+          </td>
+          <td>line-through</td>
+          <td>Defines a line through the text.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_5"> initial</td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <td class="title">text-shadow</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_11"> 2px 2px red</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_12"> 15px 15px red</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_13"> -10px 10px red</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_14"> -10px -10px red</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_15"> 5px 5px 1px red</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_16"> 5px 5px 5px red</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_17"> 5px 5px 10px blue</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_18"> 5px 5px 10px black</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_19"> 5px 5px 10px #00FF00</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_20"> none</td>
+          <td><input type="radio" name="name" value="textshadow" class="type" id="value_21"> initial</td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <td><nobr><strong>h-shadow</strong></nobr></td>
+          <td>Required. The position of the horizontal shadow. Negative values are allowed.</td>
+          <td><nobr><strong>v-shadow</strong></nobr></td>
+          <td>Required. The position of the vertical shadow. Negative values are allowed.</td>
+        </tr>
+        <tr>
+          <td><nobr><strong>blur-radius</strong></nobr></td>
+          <td>Optional. The blur radius. Default value is 0.</td>
+          <td><nobr><strong>color	Optional</strong></nobr></td>
+          <td>The color of the shadow. Look at CSS Color Values for a complete list of possible color values.</td>
+        </tr>
+        <tr>
+          <td><nobr><strong>none</strong></nobr></td>
+          <td>Default value. No shadow.</td>
+          <td><nobr><strong>initial</strong></nobr></td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+  </div>
+</body>
+</html>

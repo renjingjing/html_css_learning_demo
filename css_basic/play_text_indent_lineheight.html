@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.textindent {
+    border-style: dotted;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-indent:none;
+    line-height:normal;
+}
+div.radiogroup{
+  position:absolute;
+  top:170px;
+}
+td.title{
+  font-weight: bold;
+  font-size: 18px;
+  color:darkblue;
+}
+
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.textindent').css('text-indent','25px');
+            break;
+        case 'value_2':
+            $('.textindent').css('text-indent','50px');
+            break;
+        case 'value_3':
+            $('.textindent').css('text-indent','100px');
+            break;
+        case 'value_4':
+            $('.textindent').css('text-indent','1cm');
+            break;
+        case 'value_5':
+            $('.textindent').css('text-indent','2cm');
+            break;
+        case 'value_6':
+            $('.textindent').css('text-indent','10%');
+            break;
+        case 'value_7':
+            $('.textindent').css('text-indent','-10%');
+            break;
+        case 'value_8':
+            $('.textindent').css('text-indent','initial');
+            break;
+        case 'value_10':
+            $('.textindent').css('line-height','normal');
+            break;
+        case 'value_11':
+            $('.textindent').css('line-height','2');
+            break;
+        case 'value_12':
+            $('.textindent').css('line-height','3.5')
+            break;
+        case 'value_13':
+            $('.textindent').css('line-height','0px');
+            break;
+        case 'value_14':
+            $('.textindent').css('line-height','10px');
+            break;
+        case 'value_15':
+            $('.textindent').css('line-height','30px');
+            break;
+        case 'value_16':
+            $('.textindent').css('line-height','50%');
+            break;
+        case 'value_17':
+            $('.textindent').css('line-height','120%');
+            break;
+        case 'value_18':
+            $('.textindent').css('line-height','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+
+  <div class="textindent col-md-6">
+    <p>This example demonstrates different indents and line-height.Change the indent or line-height of
+      text by clicking on the different indent or line-height of text to see what happend!
+    </p>
+  </div>
+  <div class="textsyntax col-md-6">
+
+    <div class="col-md-3">
+      the code:
+    </div>
+    <div class="col-md-9">
+      div {
+        <br>
+        text-indent:0px;
+        <br>
+        line-height:normal;
+        <br>
+      }
+    </div>
+  </div>
+  <div class="radiogroup">
+    <h2>Let's play with text indent and line-height!</h2>
+      <table class="table">
+        <tr>
+          <td class="title">text indent</td>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="10px" class="type" id="value_1"> 10px
+            <input type="radio" name="name" value="25px" class="type" id="value_2"> 25px
+            <input type="radio" name="name" value="100px" class="type" id="value_3"> 100px
+            <input type="radio" name="name" value="1cm" class="type" id="value_4"> 1cm
+            <input type="radio" name="name" value="2cm" class="type" id="value_5"> 2cm
+          </td>
+          <td>Length</td>
+          <td>Defines a fixed indentation in px, pt, cm, em, etc. Default value is 0.</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="10%" class="type" id="value_6"> 10%
+            <input type="radio" name="name" value="-10%" class="type" id="value_7"> -10%
+          </td>
+          <td>%</td>
+          <td>Defines the indentation in % of the width of the parent element.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_8"> initial</td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+      <table class="table">
+        <tr>
+          <td class="title">text line-height</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="normal" class="type" id="value_10"> normal</td>
+          <td>normal</td>
+          <td>A normal line height. This is default.</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="2" class="type" id="value_11"> 2
+            <input type="radio" name="name" value="3.5" class="type" id="value_12"> 3.5
+          </td>
+          <td>number</td>
+          <td>number	A number that will be multiplied with the current font size to set the line height.</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="0px" class="type" id="value_13"> 0px
+            <input type="radio" name="name" value="10px" class="type" id="value_14"> 10px
+            <input type="radio" name="name" value="30px" class="type" id="value_15"> 30px
+          </td>
+          <td>length</td>
+          <td>A number that will be multiplied with the current font size to set the line height.</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="50%" class="type" id="value_16"> 50%
+            <input type="radio" name="name" value="120%" class="type" id="value_17"> 120%
+          </td>
+          <td>%</td>
+          <td>A line height in percent of the current font size.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_18"> initial</td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+  </div>
+</body>
+</html>

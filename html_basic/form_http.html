@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>form input attribute</title>
+      <!-- rails timer ajax add this testing founciton -->
+    </head>
+    <body>
+
+      <!-- send name by using get-->
+      <!-- <form action="http://localhost:2000/testforms/tellmessage"
+          method="get">
+        <input type="text" name="firstname">
+        <input type="text" name="lastname">
+        <button type="submit">Send Data</button>
+      </form> -->
+
+      <!-- send name by using post-->
+      <!--rails comment out protect_from_forgery with: :exception-->
+      <form action="http://localhost:2000/testforms/tellpostmessage"
+          method="post">
+        <input type="text" name="firstname">
+        <input type="text" name="lastname">
+        <button type="submit">Send Data</button>
+      </form>
+
+      <!-- send name and email get is default-->
+      <!-- <form action="http://localhost:2000/testforms/tellmessage" autocomplete="on">
+        First name:<input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname"><br>
+        E-mail: <input type="email" name="email" autocomplete="off"><br>
+        <input type="submit">
+      </form> -->
+
+    </body>
+  </html>

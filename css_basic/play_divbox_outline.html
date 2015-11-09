@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <style>
+
+    .frame{
+      width: 330px;
+      height:243px;
+      padding: 10px;
+      margin: 0px;
+      background-color: orange;
+      display: none;
+    }
+
+    .frameborder{
+    width: 320px;
+    height:233px;
+    padding: 10px;
+    margin: 0px;
+    display: none;
+    border-style:solid;
+    border-width:5px;
+    }
+
+    .framecolor{
+    width: 314px;
+    height:227px;
+    padding: 10px;
+    margin: 0px;
+    display: none;
+    border-style:solid;
+    border-width:8px;
+    }
+
+    .frameimageborder{
+
+    }
+
+    div.radiogroup{
+      position:relative;
+      top:3px;
+    }
+
+    div.textbox {
+      width: 320px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+      outline-color:red;
+    }
+
+    #showwhy{
+     display: none;
+    }
+
+    </style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+          $('.frame').hide();
+          $('.frameborder').hide()
+          $('#showwhy').hide();
+          $('.framecolor').hide()
+          $('#orgimg').css('display','inline');
+          $('#orgimg').fadeIn();
+            break;
+        case 'value_2':
+          $('#showwhy').hide();
+          $('.frameborder').hide();
+          $('#orgimg').hide();
+          $('.framecolor').hide()
+          $('.frame').fadeIn();
+            break;
+        // why gap
+        case 'value_3':
+          $('.frame').hide();
+          $('.frameborder').hide();
+          $('.framecolor').hide()
+          $('#showwhy').show();
+          $('#orgimg').css('display','block');
+          $('#orgimg').fadeIn();
+            break;
+        // border
+        case 'value_4':
+          $('#showwhy').hide();
+          $('#orgimg').hide();
+          $('.frame').hide()
+          $('.framecolor').hide()
+          $('.frameborder').css({'border':'5px solid black'});
+          $('.frameborder').fadeIn();
+            break;
+        // div bordercolor
+        case 'value_5':
+          $('#showwhy').hide();
+          $('#orgimg').hide();
+          $('.frame').hide()
+          $('.frameborder').hide()
+          var colorname=$('#value_6').val();
+          console.log(colorname);
+          $('.framecolor').css({'border':'8px solid','border-color':colorname});
+          $('.framecolor').fadeIn();
+            break;
+        // text div outline
+        case 'value_11':
+            $('.textbox').css('outline-style','none');
+            break;
+        case 'value_12':
+            $('.textbox').css('outline-style','hidden');
+            break;
+        case 'value_13':
+            $('.textbox').css('outline-style','dotted');
+            break;
+        case 'value_14':
+            $('.textbox').css('outline-style','dashed');
+            break;
+        case 'value_15':
+            $('.textbox').css('outline-style','solid');
+            break;
+        case 'value_16':
+            $('.textbox').css('outline-style','double');
+            break;
+        case 'value_17':
+            $('.textbox').css('outline-style','groove');
+            break;
+        case 'value_18':
+            $('.textbox').css('outline-style','ridge');
+            break;
+        case 'value_19':
+            $('.textbox').css('outline-style','inset');
+            break;
+        case 'value_20':
+            $('.textbox').css('outline-style','outset');
+            break;
+        case 'value_21':
+            $('.textbox').css('outline-style','initial');
+            break;
+        }
+  });
+});
+</script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <br>
+  <img src="cake.jpg" width="350" height="263" alt="Klematis" id="orgimg">
+  <div class="frame">
+    <img src="cake.jpg" width="330" height="243" alt="Klematis">
+  </div>
+  <div class="frameborder">
+    <img src="cake.jpg" width="320" height="233" alt="Klematis">
+  </div>
+  <div class="framecolor">
+    <img src="cake.jpg" width="320" height="233" alt="Klematis">
+  </div>
+  <div class='textbox'>The picture above is 350px wide. The total width of this element is also 350px.Please check with DOM tool!</div>
+  <div class="radiogroup">
+    <h2>Let's play with div!</h2>
+      <table>
+        <tr>
+          <td class="title">how div works</td>
+        </tr>
+        <tr>
+          <td>
+            <input type="radio" name="name" value="none" class="type" id="value_1"> how div works
+          </td>
+          <td>width height padding margin border...</td>
+        <tr>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_2">practice</td>
+          <td>give the picture a frame.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="gap" class="type" id="value_3">Why there is a gap?</td>
+          <td><p id="showwhy">Img is an inline element by default.To remove this gap we need set display as block.</p></td>
+        </tr>
+        <tr>
+          <td>play border</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="border" class="type" id="value_4">border:5px solid</td>
+          <td>div{border-style:solid;border-width:5px;}</td>
+        </tr>
+        <tr>
+          <td>
+          <input type="radio" name="name" value="border" class="type" id="value_5">
+            change color
+          <input type="color" name="name" class="type" id="value_6">choose a color</td>
+          <td>div{border-color:'somecolor you pick';border:'8px'}</td>
+        </tr>
+        <tr>
+          <td>play outline</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="none" class="type" id="value_11"> none</td>
+          <td><input type="radio" name="name" value="hidden" class="type" id="value_12"> hidden</td>
+          <td><input type="radio" name="name" value="dotted" class="type" id="value_13"> dotted</td>
+          <td><input type="radio" name="name" value="dashed" class="type" id="value_14"> dashed</td>
+          <td><input type="radio" name="name" value="solid" class="type" id="value_15"> solid</td>
+          <td><input type="radio" name="name" value="double" class="type" id="value_16"> double</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="groove" class="type" id="value_17"> groove</td>
+          <td><input type="radio" name="name" value="ridge" class="type" id="value_18"> ridge</td>
+          <td><input type="radio" name="name" value="inset" class="type" id="value_19"> inset</td>
+          <td><input type="radio" name="name" value="outset" class="type" id="value_20"> outset</td>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_21"> initial</td>
+        </tr>
+      </table>
+</body>
+</html>

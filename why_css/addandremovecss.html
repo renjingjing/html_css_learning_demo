@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS EFFECT</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<div id="csseffect">
+			<link type="text/css" rel="stylesheet" href="stylesheet.css" id="cssstyle"/>
+		</div>
+		<style media="screen">
+			button{
+				position:fix;
+				top:10px;
+				left:10px;
+				width:300px;
+				height:30px;
+				background-color: pink;
+			}
+		</style>
+		<script >
+		  $(document).ready(function(){
+		    $('button').on('click',function(){
+					var l=$('#csseffect').children().length;
+		        if (l==0) {
+							$('#csseffect').append('<link type="text/css" rel="stylesheet" href="stylesheet.css" id="cssstyle"/>');
+						}
+						else{
+							$('#csseffect').children().remove();
+						}
+				});
+			});
+		 </script>
+	</head>
+	<body>
+		<button type="button" name="button">Click me to see what does css do!</button>
+
+		<div id="header">
+			<div id="navbar">
+				<ul>
+					<li>Home</li>
+					<li>About Me</li>
+					<li>Plans for World Domination</li>
+					<li>Contact</li>
+				</ul>
+			</div>
+
+		<h2>About Me</h2>
+      <a href="http://www.minecraftskins.com" target="_blank">
+      My Favorite Site!
+      </a>
+      <a href="http://www.google.com">Google</a>
+      <p>Jump to <a href="#chapter1">to this footer!</a> </p>
+
+      <p>locate a specific place of the external webpage
+      <a href="http://en.wikipedia.org/wiki/Fox#Dentition">Wikipedia</a>
+      </p>
+		</div>
+		<div id="left">
+		<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQTaumtNQldpSKfYia3b4-u5amTyTyDrTERcnTqcwQusiK46M3GhA"/>
+		<p>Cute world.</p>
+		</div>
+		<div id="right">
+		<table>
+			<th colspan="3">BowBow</th>
+			<tr>
+				<td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ3qhlyp5FV9oVvKk_4VxOBzMXjXKW1z5-VMnGcroTzeg147QcJ4g"/></td>
+				<td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSk7RfLRQ5iPCU0Lh8YnGMFOXarB7ohzXSASn4ak9T1ds8EcIgb"/></td>
+			</tr>
+			<tr>
+				<td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTM3sLPvOTaSFrVWR-2ZC6CIR2Jati-KDZMe3-woB15LjlGKDPjpw"/></td>
+				<td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSSa7mEvuLwXvJxTFaer00LbilwS4Jgft4bxsZGRdVxNp5mwBwE_Q"/></td>
+			</tr>
+			<tr>
+				<td><img id="bottom_left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQttr4pAZhGoUckI5gNka08uMRYWHtrrUFE4xhXc8e2Z8Z6zMybRQ"/></td>
+				<td ><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3hT024qqTaFNs8UXJSuRfbnCTz2khtAsjOck_mq_aNc_4I-9Ebg"></td>
+			</tr>
+		</table>
+		</div>
+		<div id="footer">
+				<p id="chapter1">Wo Wo<span class="bold">Bow-wow Says the Cat...</span>!</p>
+		</div>
+	</body>
+</html>

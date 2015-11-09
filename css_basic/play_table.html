@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<style>
+.table1 td{
+  border-top: 1px solid lightgray;
+  /*border-bottom: 1px solid gray;*/
+  border-collapse: collapse;
+}
+
+.differstyle2, .differstyle2 td, .differstyle2 th {
+    border: 1px solid black;
+}
+
+.differstyle3, .differstyle3 td, .differstyle3 th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+.differstyle4{
+    width:60%;
+}
+
+.differstyle4 th {
+    height:50px;
+}
+
+.differstyle5 th {
+    width:60%;
+    text-align: right;
+}
+
+.differstyle6 td {
+    height:60px;
+    vertical-align: bottom;
+}
+
+.differstyle7 td {
+    padding: 15px;
+}
+
+.differstyle8 th {
+    background-color: green;
+    color:yellow;
+}
+
+div.radiogroup{
+  position:absolute;
+  top:280px;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('#differstyle,th,td').attr('class', '').css('');
+            // $('#differstyle th').css({'width':'adjust','text-align':'middle'});
+            // $('#differstyle td').css({'height':'adjust','vertical-align':'middle'});
+            $('caption').css('caption-side', 'top');
+            break;
+        case 'value_2':
+            $('#differstyle,#differstyle th,#differstyle td').attr('class', '').addClass('differstyle2');
+            $('caption').css('caption-side', 'buttom');
+            break;
+        case 'value_3':
+            $('#differstyle,#differstyle th,#differstyle td').attr('class', '').addClass('differstyle3');
+            $('caption').css('caption-side', 'top');
+            break;
+        case 'value_4':
+        $('#differstyle,#differstyle th,#differstyle td').addClass('differstyle4');
+        $('caption').css('caption-side', 'bottom');
+            break;
+        case 'value_5':
+        $('#differstyle,th').addClass('differstyle5');
+            break;
+        case 'value_6':
+        $('#differstyle,td').addClass('differstyle6');
+            break;
+        case 'value_7':
+        $('#differstyle,td').addClass('differstyle7');
+            break;
+        case 'value_8':
+        $('#differstyle,th').addClass('differstyle8');
+            break;
+          }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <div class="showtable1">
+    <caption>Play table</caption>
+    <table id="differstyle">
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Zhou</td>
+        <td>White</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="radiogroup">
+    <h2>Let's play with table!</h2>
+    <table class="table1">
+      <tr>
+        <td><input type="radio" name="name" value="defaule" class="type" id="value_1">default table</td>
+        <td>do not need set any attribute.</td>
+        <td>The default setting makes the table do not have any border to show.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="border" class="type" id="value_2">border(style,color)</td>
+        <td><nobr>table, th, td {border: 1px solid black;}</nobr></td>
+        <td>
+          This table has double borders,because both the table and the 'th' 'td' elements have separate borders.
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="border-collapse" class="type" id="value_3">border-collapse</td>
+        <td>
+          <p><nobr>table, th, td {border-collapse: collapse;}</nobr></p></td>
+        <td>
+          To display a single border for the table, use the border-collapse property.
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="justify" class="type" id="value_4" >width:60% height:50px</td>
+        <td>
+          <nobr>table {width: 60%;}</nobr>
+          <nobr>th {height: 50px;}</nobr>
+        </td>
+        <td>Width and height of a table is defined by the width and height properties.</td>
+      </tr>
+      <tr>
+        <td><nobr><input type="radio" name="name" value="textalign_right" class="type" id="value_5" >horizontal_text_align_right</nobr>
+        <td>
+          <nobr>th {width: 60%;}</nobr>
+          <nobr>th {text-align: right;}</nobr>
+        </td>
+      <td>The text-align property sets the horizontal alignment, like left, right, or center.
+        By default, the text in 'th' elements are center-aligned and the text in 'td' elements are left-aligned..</td>
+      </tr>
+        <td><nobr><input type="radio" name="name" value="textalign_bottom" class="type" id="value_6" >vertical_text_align_bottom</nobr></td>
+        <td>
+        <nobr>td {height: 50px;}</nobr>
+        <nobr>td {vertical-align: bottom;}</nobr>
+      </td>
+        <td>The vertical-align property sets the vertical alignment, like top, bottom, or middle.
+          By default, the vertical alignment of text in a table is middle (for both 'th' and 'td' elements).
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="padding" class="type" id="value_7">padding 15px</td>
+        <td>td {padding: 15px;}</td>
+        <td>To control the space between the border and content in a table.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="color" class="type" id="value_8">table color</td>
+        <td>th {<br>
+                background-color: green;<br>
+                color: yellow;<br>
+              }
+        </td>
+        <td>The default setting makes the table do not have any border to show.</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

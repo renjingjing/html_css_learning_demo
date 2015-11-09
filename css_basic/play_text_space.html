@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.textspace {
+    border-style: dotted;
+    margin:10px;
+}
+div.radiogroup{
+  margin:10px;
+}
+h2{
+  text-align: center;
+}
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.textspace').css('letter-spacing','normal');
+            break;
+        case 'value_2':
+            $('.textspace').css('letter-spacing','5px');
+            break;
+        case 'value_3':
+            $('.textspace').css('letter-spacing','10px');
+            break;
+        case 'value_4':
+            $('.textspace').css('letter-spacing','-5px');
+            break;
+        case 'value_5':
+            $('.textspace').css('letter-spacing','-10px');
+            break;
+        case 'value_6':
+            $('.textspace').css('letter-spacing','0px');
+            break;
+        case 'value_7':
+            $('.textspace').css('letter-spacing','1cm');
+            break;
+        case 'value_8':
+            $('.textspace').css('letter-spacing','initial');
+            break;
+        case 'value_11':
+            $('.textspace').css('white-space','normal');
+            break;
+        case 'value_12':
+            $('.textspace').css('white-space','nowrap');
+            break;
+        case 'value_13':
+            $('.textspace').css('white-space','pre');
+            break;
+        case 'value_14':
+            $('.textspace').css('white-space','pre-line');
+            break;
+        case 'value_15':
+            $('.textspace').css('white-space','pre-wrap');
+            break;
+        case 'value_16':
+            $('.textspace').css('white-space','initial');
+            break;
+        case 'value_21':
+            $('.textspace').css('word-spacing','normal');
+            break;
+        case 'value_22':
+            $('.textspace').css('word-spacing','5px');
+            break;
+        case 'value_23':
+            $('.textspace').css('word-spacing','10px');
+            break;
+        case 'value_24':
+            $('.textspace').css('word-spacing','-5px');
+            break;
+        case 'value_25':
+            $('.textspace').css('word-spacing','-10px');
+            break;
+        case 'value_26':
+            $('.textspace').css('word-spacing','0px');
+            break;
+        case 'value_27':
+            $('.textspace').css('word-spacing','1cm');
+            break;
+        case 'value_28':
+            $('.textspace').css('word-spacing','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <h2>Let's play with text space!</h2>
+  <div class="radiogroup row">
+      <div class="col-md-3">
+      <table class="table">
+        <tr id="letter">
+          <td></td>
+          <td></td>
+          <td>letter-spacing</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="normal" class="type" id="value_1"></td>
+          <td>normal</td>
+          <td>No extra space between characters. This is default</td>
+        </tr>
+        <tr>
+          <td>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_2">5px</nobr>
+              <br>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_3">10px</nobr>
+              <br>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_4">-5px</nobr>
+              <br>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_5">-10px</nobr>
+              <br>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_6">0px</nobr>
+              <br>
+              <nobr><input type="radio" name="name" value="length" class="type" id="value_7">1cm</nobr>
+              <br>
+            </td>
+          <td>length</td>
+          <td>Defines an extra space between characters (negative values are allowed).</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="letterspacinginitial" class="type" id="value_8"></td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+      </div>
+      <div class="col-md-6" >
+      <table class="table">
+        <tr id="white">
+          <td></td>
+          <td></td>
+          <td>white-space</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="normal" class="type" id="value_11"></td>
+          <td>normal</td>
+          <td>Sequences of whitespace will collapse into a single whitespace. Text will wrap when necessary. This is default.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="nowrap" class="type" id="value_12"></td>
+          <td>nowrap</td>
+          <td>Sequences of whitespace will collapse into a single whitespace.
+            Text will never wrap to the next line. <br>The text continues on the same
+            line until a 'br' tag is encountered.
+          </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="pre" class="type" id="value_13"></td>
+          <td>pre</td>
+          <td>Whitespace is preserved by the browser. Text will only wrap on line breaks.
+            Acts like the 'pr' tag in HTML.
+          </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="pre-line" class="type" id="value_14"></td>
+          <td>pre-line</td>
+          <td>Sequences of whitespace will collapse into a single whitespace.
+            Text will wrap when necessary, and on line breaks.
+          </td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="pre-wrap" class="type" id="value_15"></td>
+          <td>pre-wrap</td>
+          <td>Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="whitespaceinitial" class="type" id="value_16"></td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+      </div>
+      <div class="col-md-3">
+      <table class="table">
+        <tr id="word">
+          <td></td>
+          <td></td>
+          <td>word-spacing</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="normal" class="type" id="value_21"></td>
+          <td>normal</td>
+          <td>Defines normal space between words . This is default.</td>
+        </tr>
+        <tr>
+          <td>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_22">5px</nobr>
+            <br>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_23">10px</nobr>
+            <br>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_24">-5px</nobr>
+            <br>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_25">-10px</nobr>
+            <br>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_26">0px</nobr>
+            <br>
+            <nobr><input type="radio" name="name" value="length" class="type" id="value_27">1cm</nobr>
+            <br>
+            </td>
+          <td>length</td>
+          <td>Defines an extra space between words in px, pt, cm, em, etc. Negative values are allowed.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="wordspacinginitial" class="type" id="value_28"></td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="textspace row">
+    <p>This example demonstrates different space.Change the space of
+      text by clicking on the different space of text to see what happend!
+    <br>
+    the code:
+    <br>
+    div {
+      <br>
+          letter-spacing: 2px;
+          white-space: nowrap;
+          word-spacing: 30px;
+      <br>
+        }
+      <br>
+    </p>
+  </div>
+</body>
+</html>

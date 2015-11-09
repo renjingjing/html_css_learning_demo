@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function removeElement() {
+    document.getElementById("imgbox1").style.display = "none";
+}
+
+function changeVisibility() {
+    document.getElementById("imgbox2").style.visibility = "hidden";
+}
+
+function resetElement() {
+    document.getElementById("imgbox1").style.display = "block";
+    document.getElementById("imgbox2").style.visibility = "visible";
+}
+</script>
+<style>
+.imgbox {
+    float: left;
+    text-align: center;
+    width: 220px;
+    height: 195px;
+    border: 1px solid gray;
+    margin: 4px;
+    padding: 0;
+}
+
+.thumbnail {
+    width: 160px;
+    height: 140px;
+    margin: 3px;
+}
+
+.box {
+    width: 110px;
+    padding: 0;
+}
+</style>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <br>
+<h2 style='text-align:center'>click button to see the differences of
+  <!-- <em style='display:block'>display</em> and <em style='display:block'>visibility</em> -->
+  <em >display</em> and <em >visibility</em>
+  value </h2>
+<div style="text-align:center">
+  <div style="width:694px;height:210px;margin-left:auto;margin-right:auto;text-align:left;border:1px solid gray;">
+    <div class="imgbox" id="imgbox1">to display:none<br>
+      <img class="thumbnail" src="display1.jpeg" width="157" height="140" alt="Klematis">
+      <input class="box" type="button" onclick="removeElement()" value="Remove">
+    </div>
+    <div class="imgbox" id="imgbox2">to visibility:hidden<br>
+      <img class="thumbnail" src="display2.jpg" width="157" height="140" alt="Klematis">
+      <input class="box"  type="button" onclick="changeVisibility()" value="Hide">
+    </div>
+    <div class="imgbox">display:block;visibility:visible<br>
+      <img class="thumbnail" src="display3.jpeg" width="157" height="140" alt="Klematis">
+      <input class="box"  type="button" onclick="resetElement()" value="Reset All">
+    </div>
+  </div>
+</div>
+
+<h2>two p tags default display block </h2>
+  <p>
+    paragragh1: A flower, sometimes known as a bloom or blossom.
+  </p>
+  <p>
+    paragragh2: A flower, sometimes known as a bloom or blossom.
+  </p>
+
+<h2>two span tags default display inlne </h2>
+  <span>
+    span1: A flower, sometimes known as a bloom or blossom.
+  </span>
+  <span>
+    span2: A flower, sometimes known as a bloom or blossom.
+  </span>
+
+<h2>set two p tags display inline </h2>
+  <p style='display:inline'>
+    paragragh1: A flower, sometimes known as a bloom or blossom.
+  </p>
+  <p style='display:inline'>
+    paragragh2: A flower, sometimes known as a bloom or blossom.
+  </p>
+
+<h2 >set two span tags display block </h2>
+  <span style='display:block'>
+    span1: A flower, sometimes known as a bloom or blossom.
+  </span>
+  <span style='display:block'>
+    span2: A flower, sometimes known as a bloom or blossom.
+  </span>
+
+</body>
+</html>

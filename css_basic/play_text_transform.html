@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.texttransform {
+    border-style: dotted;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-transform:none;
+}
+div.radiogroup{
+  position:absolute;
+  top:150px;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.texttransform').css('text-transform','none');
+            break;
+        case 'value_2':
+            $('.texttransform').css('text-transform','capitalize');
+            break;
+        case 'value_3':
+            $('.texttransform').css('text-transform','uppercase');
+            break;
+        case 'value_4':
+            $('.texttransform').css('text-transform','lowercase');
+            break;
+        case 'value_5':
+            $('.texttransform').css('text-transform','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+
+  <div class="texttransform col-md-6">
+    <p>This example demonstrates different transforms.Change the transform of
+      text by clicking on the different transform of text to see what happend!
+    <br>
+    the code:
+    <br>
+    div {
+      <br>
+      text-transform:none;
+      <br>
+    }
+    <br>
+  </p>
+</div>
+  <div class="radiogroup">
+    <h2>Let's play with text transform!</h2>
+    <table class="table">
+      <tr>
+        <td><input type="radio" name="name" value="none" class="type" id="value_1"></td>
+        <td>none</td>
+        <td>No capitalization. The text renders as it is. This is default.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="capitalize" class="type" id="value_2"></td>
+        <td>capitalize</td>
+        <td>Transforms the first character of each word to uppercase.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="uppercase" class="type" id="value_3"></td>
+        <td>uppercase</td>
+        <td>Transforms the first character of each word to uppercase.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="lowercase	" class="type" id="value_4"></td>
+        <td>lowercase</td>
+        <td>Transforms all characters to lowercase.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="initial" class="type" id="value_5"></td>
+        <td>initial</td>
+        <td>Sets this property to its default value.</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

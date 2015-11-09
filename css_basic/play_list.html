@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div{
+  border-style: solid;
+  border-radius: 2px;s
+}
+ul.onelineinside {
+    list-style: square inside url("sqpurple.gif");
+}
+
+ul.onelineoutside {
+    list-style: square outside url("smiley.gif");
+}
+
+li#pic9px {
+    background-size: 9px;
+}
+
+ul.b {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li.c {
+    background-image: url(home_icon.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px center;
+    padding-left: 15px;
+    background-size: 9px;
+}
+
+ol.ola {
+    list-style-type: upper-roman;
+}
+
+ol.olb {
+    list-style-type: lower-alpha;
+}
+</style>
+</head>
+<body>
+<h2>Example of unordered lists and online syntax:</h2>
+
+    <!-- this is list-style shorthand property   -->
+    <h3>example 1:</h3>
+    <div>
+      <p>
+        ul{list-style: square inside url("sqpurple.gif");}
+      </p>
+      <p>
+        online syntax order: list-style-type, list-style-position, list-style-image
+      </p>
+      <ul class="onelineinside">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+      </ul>
+    </div>
+
+
+    <h3>example 2:</h3>
+    <div>
+      <p>
+        ul{list-style: square outside url("smiley.gif");}
+      </p>
+      <ul class="onelineoutside">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+      </ul>
+    </div>
+
+
+    <!-- to define list-style separately can controle more details  -->
+    <h3>example 3:</h3>
+    <div>
+      <p>
+        ul{
+          list-style-type: none;
+          padding: 0px;
+          margin: 0px;}
+      </p>
+      <p>
+        li{<br>
+          background-image: url(home_icon.jpg);<br>
+          background-repeat: no-repeat;<br>
+          background-position: 0px center;<br>
+          padding-left: 15px;<br>
+          background-size: 9px;<br>
+        }
+      </p>
+      <ul class="b">
+        <li class="c">Coffee</li>
+        <li class="c">Tea</li>
+        <li class="c">Coca Cola</li>
+      </ul>
+    </div>
+
+
+<h2>Example of ordered lists:</h2>
+  <h3>example 4:</h3>
+  <div>
+    <p>
+      ol {ist-style-type: upper-roman;}
+    </p>
+    <ol class="ola">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+  </div>
+
+  <h3>example 5:</h3>
+  <div>
+    <p>
+      ol {list-style-type: lower-alpha;}
+    </p>
+    <ol class="olb">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+  </div>
+
+</body>
+</html>

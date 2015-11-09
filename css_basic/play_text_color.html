@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+
+div.textcolor {
+    border-style: dotted;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+div.radiogroup{
+  position:absolute;
+  top:150px;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.textcolor').css('color','red');
+            break;
+        case 'value_2':
+            $('.textcolor').css('color','blue');
+            break;
+        case 'value_3':
+            $('.textcolor').css('color','#000000');
+            break;
+        case 'value_4':
+            $('.textcolor').css('color','#ff9900');
+            break;
+        case 'value_5':
+            $('.textcolor').css('color','rgb(0,255,0)');
+            break;
+        case 'value_6':
+            $('.textcolor').css('color','rgb(255,130,255)');
+            break;
+        case 'value_7':
+            $('.textcolor').css('color','transparent');
+            break;
+        case 'value_8':
+            $('.textcolor').css('color','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <div class="textcolor col-md-6">
+    <p>This example demonstrates different colors.Change the color of the text
+      by clicking on the different color values to see what happend!
+      <br>
+      the code:
+      <br>
+      div {
+        <br>
+        color:initial;
+        <br>
+      }
+      <br>
+    </p>
+  </div>
+  <div class="radiogroup">
+    <h2>Let's play with text color!</h2>
+    <table class="table">
+      <tr>
+        <td><input type="radio" name="name" value="red" class="type" id="value_1"></td>
+        <td>red</td>
+        <td>Specifies the text color. Look at CSS Color Values for a complete list of possible color values.</td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="blue" class="type" id="value_2"></td>
+        <td>blue</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="#000000" class="type" id="value_3"></td>
+        <td>#000000</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="#ff9900r" class="type" id="value_4"></td>
+        <td>#ff9900</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="rgb(0,255,0)" class="type" id="value_5"></td>
+        <td>rgb(0,255,0)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="rgb(255,130,255)" class="type" id="value_6"></td>
+        <td>rgb(255,130,255)</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><input type="radio" name="name" value="transparent" class="type" id="value_7"></td>
+        <td>transparent</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td><input type="radio" name="name" value="initial" class="type" id="value_8"></td>
+        <td>initial</td>
+        <td>Sets this property to its default value.</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

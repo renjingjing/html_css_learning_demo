@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<style>
+div {
+border-style:dashed;
+background-color:red;
+display:none
+ }
+
+p {
+    background-color: yellow;
+    opacity:0.6;
+    overflow: auto;
+    display:none
+}
+</style>
+<script >
+  $(document).ready(function(){
+    $('h3').mousedown(function(){
+      var i=$(this).attr('id');
+      console.log(i);
+        switch(i) {
+        case 'h1':
+            $('p,div,#p11,#p12').hide();
+            $('h3').css('background-color','transparent');
+            $('#p11').show();
+            $('#h1').css('background-color','lightblue');
+            break;
+        case 'h2':
+            $('p,div,#p11,#p12').hide();
+            $('h3').css('background-color','transparent');
+            $('#p12').css({'width':'60%','height':'10%'}).show();
+            $('#h2').css('background-color','lightblue');
+            break;
+        case 'h3':
+            $('p,div,#p11,#p12').hide();
+            $('h3').css('background-color','transparent');
+            $('div').css({'width':'250px','height':'400px'}).show();
+            $('#p3').show();
+            $('#h3').css('background-color','lightblue');
+            break;
+        case 'h4':
+            $('p,div,#p11,#p12').hide();
+            $('h3').css('background-color','transparent');
+            $('div').css({'width':'250px','height':'400px'}).show();
+            $('#p4').css('height','80px').show();
+            $('#h4').css('background-color','lightblue');
+            break;
+        case 'h5':
+            $('p,div,#p11,#p12').hide();
+            $('h3').css('background-color','transparent');
+            $('div').css({'width':'250px','height':'400px'}).show();
+            $('#p5').css('height','30%').show();
+            $('#h5').css('background-color','lightblue');
+            break;
+        }
+  });
+});
+ </script>
+
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <br>
+    <p id='p11'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4]</p>
+    <p id='p12'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4] </p>
+  <div class="">
+    <p id='p2'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4] </p>
+    <p id='p3'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4] </p>
+    <p id='p4'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4] </p>
+    <p id='p5'>Geography (from Greek γεωγραφία, geographia, lit. "earth description"[1]) is a field study of the lands, the features, the inhabitants, and the phenomena of Earth.[2] A literal translation would be "to describe or picture or write about the earth". The first person to use the word "geography" was Eratosthenes (276–194 BC).[3] Four historical traditions in geographical research are spatial analysis of the natural and the human phenomena (geography as the study of distribution), area studies (places and regions), study of the human-land relationship, and research in the Earth sciences.[4] </p>
+  </div>
+
+  <h3 id='h1'>This shows a only 'p' tag</h3>
+  <h3 id='h2'>This shows a only 'p' tag(width:60%,height:10%)</h3>
+  <h3 id='h3'>This shows a 'p' tag(without set width and height) inside a 'div width:250px,height:400px'</h3>
+  <h3 id='h4'>This shows a 'p' tag(height:'80px') inside a 'div width:250px,height:400px'</h3>
+  <h3 id='h5'>This shows a 'p' tag(height:'30%') inside a 'div width:250px,height:400px'</h3>
+
+</html>

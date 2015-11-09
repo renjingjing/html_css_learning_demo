@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.div1 {
+    float: left;
+    width: 150px;
+    height: 120px;
+    margin: 0px;
+    border: 3px solid pink;
+}
+
+.div2 {
+    border: 1px solid blue;
+    width:500px;
+    height:auto;
+}
+
+
+.div3 {
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border: 3px solid pink;
+}
+
+.div4 {
+    border: 1px solid blue;
+    width:500px;
+    clear: left;
+}
+
+.div5 {
+  float: left;
+  width: 150px;
+  height:120px;
+  margin: 0px;
+  border: 3px solid green;
+}
+
+.div6{
+  border: 1px solid orange;
+  width:500px;
+  overflow: auto;
+}
+
+h2{
+    clear: left;
+}
+
+/*position*/
+.position{
+  width:100%;
+  height:300px;
+  background-color: lightyellow;
+}
+
+.absolute {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    width: 200px;
+    height: 100px;
+    background-color: lightpink;
+}
+
+.fixed{
+  width:150px;
+  height:50px;
+  background-color: lightgreen;
+  position:fixed;
+  right:20px;
+  top:200px;
+}
+
+.relative{
+  width:300px;
+  /*height:50px;*/
+  background-color: lightblue;
+  position:relative;
+  left:20px;
+}
+
+/*float and inlineblock to layout a page*/
+/*inlineblock*/
+.inlinge-box {
+    display: inline-block;
+    width: 350px;
+    height: 175px;
+    margin: 10px;
+    border: 3px solid grey;
+    background-color: lightgrey;
+}
+
+.after-inline-box {
+  border: 3px solid grey;
+  height:100px;
+}
+
+/*float*/
+.floating-box {
+    float: left;
+    width: 350px;
+    height: 175px;
+    margin: 10px;
+    border: 3px solid grey;
+    background-color: lightgrey;
+}
+
+.after-float-box {
+    clear: left;
+    border: 3px solid grey;
+    height:100px;
+    background-color: lightgrey;
+}
+
+</style>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <div class="position">
+    <h1>Layout-Position</h1>
+    the position of this lightyellow box  has position<strong>static</strong>
+    <div class="absolute">This div element has position<strong>absolute</strong>.
+      lightyellow block is the nearest positioned ancestor of it.
+    </div>
+  </div>
+  <div class="fixed">
+    the position of this lightgreen box has position<strong>fixed</strong>
+  </div>
+  <div class="relative">
+    the position of this lightblue box has position<strong>relative</strong>, it was adjusted to left 20px away from its normal position.
+  </div>
+
+  <h1>Layoyt-Float</h1>
+  <h2>1 . Without clear div2 around div1</h2>
+  <div class="div1">div1 folat left</div>
+  <div class="div2">div2 is after div1 without clear float.text in div2 is floated around div1, and div2 surrounds the whole thing.</div>
+
+  <h2>2 . Using clear</h2>
+  <div class="div3">div3 folat left</div>
+  <div class="div4">div4 is after div1 and using clear moves div4 down below the floated div3. We can also clear "right" and "both".</div>
+
+  <h2>3 . Clearfix overflow auto</h2>
+  <div class="div6">
+    <div class="div5">div1 folat left</div>
+    div2 warps div1, but div1 is higher than div2, using overflow auto to div1, so that div2 can containt div1
+  </div>
+
+
+  <h1>Two ways layout a page</h1>
+  <h2>1 . using float (set float:left and need float:clear after those boxes)</h2>
+  <div class="floating-box">Block1</div>
+  <div class="floating-box">Block2</div>
+  <div class="floating-box">Block3</div>
+  <div class="floating-box">Block4</div>
+  <div class="floating-box">Block5</div>
+  <div class="floating-box">Block6</div>
+  <div class="floating-box">Block7</div>
+  <div class="floating-box">Block8</div>
+  <div class="floating-box">Block9</div>
+  <div class="after-float-box">after the floating boxes...</div>
+
+
+  <h2>2 . using inline-block (set display:inline-blockwithout and whithou float:clear after those boxes)</h2>
+  <div class="inlinge-box">Block1</div>
+  <div class="inlinge-box">Block2</div>
+  <div class="inlinge-box">Block3</div>
+  <div class="inlinge-box">Block4</div>
+  <div class="inlinge-box">Block5</div>
+  <div class="inlinge-box">Block6</div>
+  <div class="inlinge-box">Block7</div>
+  <div class="inlinge-box">Block8</div>
+  <div class="inlinge-box">Block9</div>
+  <div class="after-inline-box">Another box, after the floating boxes...</div>
+
+</body>
+</html>

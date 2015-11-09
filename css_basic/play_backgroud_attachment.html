@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.fixed-bg {
+    background-image: url("bird.png");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: small;
+    /*background-color:lightpink;*/
+}
+.cage {
+    background-image: url("cage.png"),url("bird.png");
+    /*width:200px;*/
+    min-height:500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 219px 250px;
+    /*background-color:lightpink;*/
+}
+</style>
+</head>
+<body>
+<nav>
+  << <a href="playground.html">goback</a>
+</nav>
+<p >In this example, we have created a fixed background image of a bird that will be caged on scroll. Scroll the page to see the effect. <strong>Note:</strong> Try to remove the background-attachment property to really understand this example.</p>
+
+<div class="fixed-bg"></div>
+
+<div class="cage">
+  This div which has a background image of a bird in a cage is only here to enable scrolling (height = 500 pixels the background image of a bird in a cage was set to fixed too)
+</div>
+
+</body>
+</html>

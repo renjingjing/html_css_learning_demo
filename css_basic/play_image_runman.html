@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+
+
+/*sprite*/
+div{
+  width:950px;
+  height:180px;;
+  border-top:solid;
+  border-bottom:solid;
+  border-width: thick;
+  border-color: lightgrey;
+  padding-top:20px;
+  padding-left: 20px;
+}
+
+#runlist {
+    position: relative;
+    display:inline-block;
+}
+
+#runlist li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+}
+
+#runlist li, #runlist a {
+    height: 130px;
+    display: block;
+}
+
+#home {
+    left: 0px;
+    width: 90px;
+    background: url('shax_move_blank.jpg') 0 0;
+}
+
+#next1 {
+    left: 90px;
+    width: 90px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next2 {
+    left: 180px;
+    width: 90px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next3 {
+    left: 270px;
+    width: 80px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next4 {
+    left: 340px;
+    width: 65px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next5 {
+    left: 410px;
+    width: 70px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next6 {
+    left: 490px;
+    width: 80px;
+    background: url('shax_move_blank.jpg') -90px 0;
+}
+
+#next7 {
+    left: 565px;
+    width: 80px;
+    background: url('shax_move_blank.jpg') -80px 0;
+}
+
+
+#home a:hover {
+    background: url('shax_move.jpg') 0px 0px;
+}
+
+#next1 a:hover {
+    background: url('shax_move.jpg') -90px 0px;
+}
+
+#next2 a:hover {
+    background: url('shax_move.jpg') -180px 0px;
+}
+
+#next3 a:hover {
+    background: url('shax_move.jpg') -270px 0px;
+}
+
+#next4 a:hover {
+    background: url('shax_move.jpg') -340px 0px;
+}
+
+#next5 a:hover {
+    background: url('shax_move.jpg') -410px 0px;
+}
+
+#next6 a:hover {
+    background: url('shax_move.jpg') -480px 0px;
+}
+
+#next7 a:hover {
+    background: url('shax_move.jpg') -560px 0px;
+}
+
+
+</style>
+
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <h2>fun for Image Sprites</h2>
+  <h2>Between the grey lines,what did you see?</h2>
+  <h2>mouse hoverover from left to right --->>></h2>
+  <div>
+    <img src="download.png" alt="" width="130px" height="130px" position="relative" margin-top="20px" align="left"/>
+    <ul id="runlist">
+      <li id="home"><a href="#"></a></li>
+      <li id="next1"><a href="#"></a></li>
+      <li id="next2"><a href="#"></a></li>
+      <li id="next3"><a href="#"></a></li>
+      <li id="next4"><a href="#"></a></li>
+      <li id="next5"><a href="#"></a></li>
+      <li id="next6"><a href="#"></a></li>
+      <li id="next7"><a href="#"></a></li>
+    </ul>
+  </div>
+
+</body>
+</html>

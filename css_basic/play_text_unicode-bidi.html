@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<style>
+div.unicode-bidi {
+    border-style: dotted;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    direction:rtl;
+    unicode-bidi:initial;
+}
+div.textsyntax {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+div.radiogroup{
+  position:absolute;
+  top:150px;
+}
+td.title{
+  font-weight: bold;
+  font-size: 18px;
+  color:darkblue;
+}
+
+</style>
+<script >
+  $(document).ready(function(){
+    $('.type').on('click',function(){
+      var i=$('input[type=radio][name=name]:checked').attr('id');
+      console.log(i);
+        switch(i) {
+        case 'value_1':
+            $('.unicode-bidi').css('unicode-bidi','normal');
+            break;
+        case 'value_2':
+            $('.unicode-bidi').css('unicode-bidi','embed');
+            break;
+        case 'value_3':
+            $('.unicode-bidi').css('unicode-bidi','bidi-override');
+            break;
+            line-through
+        case 'value_4':
+            $('.unicode-bidi').css('unicode-bidi','initial');
+            break;
+        }
+  });
+});
+ </script>
+</head>
+<body>
+  <nav>
+    << <a href="playground.html">goback</a>
+  </nav>
+  <br>
+  <div class="unicode-bidi col-md-6">
+    This example demonstrates different unicode-bidi.Change the unicode-bidi of
+    text by clicking on the different unicode-bidi of text to see what happend!
+  </div>
+  <div class="textsyntax col-md-6">
+
+    <div class="col-md-3">
+      the code:
+    </div>
+    <div class="col-md-9">
+      div {
+        <br>
+        direction:rtl;
+        <br>
+        unicode-bidi:initial;
+        <br>
+      }
+      <br>
+    </div>
+      syntax:unicode-bidi: normal|embed|bidi-override|intitial|inherit;
+  </div>
+  <div class="radiogroup">
+    <h2>Let's play with text unicode-bidi!</h2>
+      <table class="table">
+        <tr>
+          <td class="title">unicode-bidi</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="normal" class="type" id="value_1"> normal</td>
+          <td>normal</td>
+          <td>Does not use an additional level of embedding. This is default.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="embed" class="type" id="value_2"> embed</td>
+          <td>embed</td>
+          <td>Creates an additional level of embedding.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="bidi-override" class="type" id="value_3"> bidi-override</td>
+          <td>bidi-override</td>
+          <td>Creates an additional level of embedding. Reordering depends on the direction property.</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="name" value="initial" class="type" id="value_4"> initial</td>
+          <td>initial</td>
+          <td>Sets this property to its default value.</td>
+        </tr>
+      </table>
+  </div>
+</body>
+</html>
